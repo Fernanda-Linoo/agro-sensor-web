@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ContainerTabelaComponent } from './container-tabela/container-tabela.component';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [ContainerTabelaComponent],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
-  protected readonly title = signal('agro-sensor-web');
-}
+export class App {}

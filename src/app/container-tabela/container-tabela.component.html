@@ -21,7 +21,7 @@
         <td>{{ s.n }}</td>
         <td>{{ s.p }}</td>
         <td>{{ s.k }}</td>
-        <td>{{ s.umidade * 100 }}%</td>
+        <td>{{ s.umidade | percent }}</td>
         <td><span class="badge" [class]="'badge ' + classeStatus(s.status)">{{ s.status }}</span></td>
       </tr>
     </tbody>

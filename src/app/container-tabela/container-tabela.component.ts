@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, PercentPipe } from '@angular/common';
 import { LeituraSolo } from '../interfaces/sensores.interface';
 
 @Component({
   selector: 'app-container-tabela',
-  imports: [NgFor],
+  imports: [NgFor, PercentPipe],
   templateUrl: './container-tabela.component.html',
   styleUrls: ['./container-tabela.component.css'],
 })

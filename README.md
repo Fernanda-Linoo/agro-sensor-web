@@ -1,59 +1,65 @@
-# AgroSensorWeb
+# AgroSensorWeb — Painel de Monitoramento IoT (Sensores de Solo)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.7.
+Atividade prática **"Criação de Projeto Angular e Componente de Sensores IoT"**
+Disciplina: ESW239 — Desenvolvimento de Software para Web · Prof. Me. Sergio Souza Novak · UniRV
 
-## Development server
+## Identificação do aluno
 
-To start a local development server, run:
+| Campo | Valor |
+|---|---|
+| Nome completo | Fernanda Oliveira Lino |
+| Matrícula UniRV | 23207SFT013 |
 
-```bash
-ng serve
+## Sobre o projeto
+
+Aplicação Angular (SPA + TypeScript) criada com o Angular CLI para o estudo de caso
+**Monitoramento Agrícola IoT**. O componente `container-tabela` exibe as leituras dos
+sensores de solo: Nitrogênio (N), Fósforo (P), Potássio (K), Umidade, Data/Hora e Status.
+
+Estrutura principal:
+
+```
+src/app/
+├── interfaces/
+│   └── sensores.interface.ts          # interface LeituraSolo (tipagem dos dados)
+├── container-tabela/
+│   ├── container-tabela.component.ts   # lógica + vetor de leituras
+│   ├── container-tabela.component.html # template da tabela (*ngFor)
+│   └── container-tabela.component.css  # estilos (zebra, cabeçalho escuro, badges)
+├── app.ts                              # componente raiz (importa ContainerTabelaComponent)
+└── app.html                            # <app-container-tabela></app-container-tabela>
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+> Observação: nas versões recentes do Angular CLI o componente raiz é gerado como
+> `app.ts` / `app.html` (equivalentes a `app.component.ts` / `app.component.html`).
 
-## Code scaffolding
+## Instalação e execução
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Pré-requisitos: [Node.js](https://nodejs.org/) (LTS) e Angular CLI (`npm install -g @angular/cli`).
 
 ```bash
-ng generate --help
+git clone https://github.com/Fernanda-Linoo/agro-sensor-web.git
+cd agro-sensor-web
+npm install
+ng serve --open
 ```
 
-## Building
+A aplicação abre em `http://localhost:4200`.
 
-To build the project run:
+Para rodar os testes: `ng test`.
 
-```bash
-ng build
-```
+## Captura de tela
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Tabela de sensores renderizada no navegador em `http://localhost:4200`:
 
-## Running unit tests
+![Tabela de sensores renderizada em localhost:4200](docs/screenshot-tabela.png)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Etapas implementadas (histórico de commits)
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Criação e inicialização do projeto com `ng new agro-sensor-web`
+2. Interface de dados `LeituraSolo` em TypeScript
+3. Geração do componente `container-tabela` via Angular CLI
+4. Lógica do componente e conjunto de dados de teste
+5. Template HTML da tabela e estilização (zebra, cabeçalho escuro, status coloridos)
+6. Integração no componente raiz
+7. Documentação e publicação no GitHub

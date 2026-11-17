@@ -1,0 +1,75 @@
+.painel-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 24px 28px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #1f2d1f;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2e5d34;
+}
+
+.subtitulo {
+  margin: 4px 0 20px;
+  color: #5f6f5f;
+}
+
+.tabela-sensores {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #dfe6df;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.tabela-sensores thead th {
+  background: #2f3e2f;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+.tabela-sensores td {
+  padding: 11px 14px;
+  border-top: 1px solid #e8eee8;
+}
+
+.tabela-sensores tbody tr:nth-child(even) {
+  background: #f4f8f4;
+}
+
+.tabela-sensores tbody tr:hover {
+  background: #e6f0e6;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-ideal {
+  background: #e3f4e5;
+  color: #1e7b34;
+}
+
+.status-alerta {
+  background: #fff3d6;
+  color: #9a6700;
+}
+
+.status-critico {
+  background: #fde2e1;
+  color: #b42318;
+}
